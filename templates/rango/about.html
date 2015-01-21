@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>About</title>
+    </head>
+
+    <body>
+        <h1>Who's that?</h1>
+        It's William! and his cat!<strong>{{ boldmessage }}</strong><br />
+        <a href="/rango/">Home</a><br />
+		<img src="{% static "images/parker.jpg" %}" alt="Parker, the cat" />
+    </body>
+
+</html>

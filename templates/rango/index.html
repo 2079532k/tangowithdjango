@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>Home</title>
+    </head>
+
+    <body>
+        <h1>William says...</h1>
+        hello world! <strong>{{ boldmessage }}</strong><br />
+        <a href="/rango/about/">About</a><br />
+		<img src="{% static "images/lake.jpg" %}" alt="Lake Buttermere, taken by William" />
+    </body>
+
+</html>
