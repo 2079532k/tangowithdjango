@@ -1,5 +1,6 @@
 from django.db import models
 
+<<<<<<< HEAD
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
 
@@ -14,3 +15,6 @@ class Page(models.Model):
 
     def __unicode__(self):
         return self.title
+=======
+# Create your models here.
+>>>>>>> 7a0df6ca4d0c2660dace689ad27311c33a6bc33d
