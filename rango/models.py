@@ -1,11 +1,18 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
-<<<<<<< HEAD
 class Category(models.Model):
-    name = models.CharField(max_length=128, unique=True)
+        name = models.CharField(max_length=128, unique=True)
+        views = models.IntegerField(default=0)
+        likes = models.IntegerField(default=0)
+        slug = models.SlugField(unique = True, default = "")
 
-    def __unicode__(self):
-        return self.name
+        def save(self, *args, **kwargs):
+                self.slug = slugify(self.name)
+                super(Category, self).save(*args, **kwargs)
+
+        def __unicode__(self):
+                return self.name
 
 class Page(models.Model):
     category = models.ForeignKey(Category)
@@ -15,6 +22,4 @@ class Page(models.Model):
 
     def __unicode__(self):
         return self.title
-=======
-# Create your models here.
->>>>>>> 7a0df6ca4d0c2660dace689ad27311c33a6bc33d
+
