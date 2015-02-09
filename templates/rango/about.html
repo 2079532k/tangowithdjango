@@ -1,18 +1,12 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
 {% load staticfiles %}
 
-<html>
+{% block title %}About{% endblock %}
 
-    <head>
-        <title>About</title>
-    </head>
-
-    <body>
-        <h1>Who's that?</h1>
-        It's William! and his cat!<strong>{{ boldmessage }}</strong><br />
-        <a href="/rango/">Home</a><br />
+{% block body_block %}
+        <h1>And who made this fine web application?</h1>
+        William did! and here he is with his cat!<strong>{{ boldmessage }}</strong><br />
 		<img src="{% static "images/parker.jpg" %}" alt="Parker, the cat" />
-    </body>
 
-</html>
+{% endblock %}
