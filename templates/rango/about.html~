@@ -1,12 +1,12 @@
-{% extends 'rango/../base.html' %}
+{% extends 'base.html' %}
 
 {% load staticfiles %}
 
 {% block title %}About{% endblock %}
 
 {% block body_block %}
-        <h1>And who made this fine web application?</h1>
+        <h1>And who made this fine web application?</h1><br>
         William did! and here he is with his cat!<strong>{{ boldmessage }}</strong><br />
-		<br><img src="{% static "images/parker.jpg" %}" alt="Parker, the cat" />
+		<img src="{% static "images/parker.jpg" %}" alt="Parker, the cat" />
     <p> This site has been visited {{ visits }} times</p>
 {% endblock %}
