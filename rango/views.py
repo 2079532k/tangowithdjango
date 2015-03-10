@@ -56,7 +56,7 @@ def index(request):
     except:
         pass
 
-    response = render(request,'rango/index.html', context_dict)
+    response = render(request,'rango/index.html', context_dict)/
 
     return response
 
@@ -100,7 +100,7 @@ def category(request, category_name_slug):
     if not context_dict['query']:
         context_dict['query'] = category.name
 
-    return render(request, 'rango/category.html', context_dict)
+    return render(request, 'rango/category.html', context_dict)/
 
 @login_required
 def add_category(request):
